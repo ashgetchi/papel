@@ -4,7 +4,7 @@ from django.db import models
 class Stationery(models.Model):
   name = models.CharField(max_length=40)
   description = models.CharField(max_length=500)
-  designer = models.CharField(max_length=40)
+  designer = models.ForeignKey('designers.Designer', related_name='designer', on_delete=models.CASCADE)
   type = models.CharField(max_length=40)
   users_who_basketed = models.CharField(max_length=100)
   price = models.FloatField()
