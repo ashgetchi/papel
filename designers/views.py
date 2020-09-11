@@ -5,13 +5,13 @@ from rest_framework import status
 from rest_framework.exceptions import NotFound
 
 from .models import Designer
-from .serializers import DesignerSerializer
+from .serializers import PopulatedDesignerSerializer
 
 class DesignerListView(APIView):
 
   def get(self, _request):
     designers = Designer.objects.all() #grabbing all of the stationerys from db
-    serialized_designers = DesignerSerializer(designers, many=True) #turning them into JSON 
+    serialized_designers = PopulatedDesignerSerializer(designers, many=True) #turning them into JSON 
     return Response(serialized_designers.data, status=status.HTTP_200_OK) #send back as JSON with status 200 OK
 
 class DesignerDetailView(APIView):
@@ -24,7 +24,7 @@ class DesignerDetailView(APIView):
 
   def get(self, _request, pk):
     designer = self.get_designer(pk)
-    serialized_designer = DesignerSerializer(designer)
+    serialized_designer = PopulatedDesignerSerializer(designer)
     return Response(serialized_designer.data, status=status.HTTP_200_OK)
   
 
