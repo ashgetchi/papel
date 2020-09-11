@@ -3,30 +3,30 @@
   "model": "stationery.stationery",
   "pk": 1,
   "fields": {
-    "name": "Wildflower",
+    "name": "Brocade Bird",
     "description": "Some of our loveliest relationships are with our notebooks – those trusty places to scribble big ideas, little reminders and anything that inspires you throughout the day. Once you’ve chosen between our hardback or softback options, plus whether you want lined, dotted or plain paper inside, personalise your cover with a name, a fun title, your alter ego or a special tribute – anything you like!",
-    "designer": "Mother of Pearl",
+    "designer": 1,
     "type": "notebook",
     "users_who_basketed": "none",
     "price": 19.99,
     "quantity": 10,
     "in_stock": true,
-    "image": "https://papier.imgix.net/https%3A%2F%2Fpapier.imgix.net%2Fhttps%253A%252F%252Fwww.papier.com%252Fproduct_image%252F90348%252F25%252Fwildflower-22590_front_1585321409.png%3Fixlib%3Drb-3.2.1%26auto%3Dformat%252Ccompress%26s%3Dd2f050e30309609f79c411346cd5aa9e?ixlib=rb-3.2.1&w=400&h=400&auto=format%2Ccompress&s=161980083f497bb553c7573f53d532ac"
+    "image": "https://papier.imgix.net/https%3A%2F%2Fwww.papier.com%2Fproduct_image%2F41926%2F25%2Fbrocade-bird-10684_front_1585322045.png?ixlib=rb-3.2.1&auto=format%2Ccompress&s=088d6ce3f6b3ab4670f8582a3d75dce6"
   }
 },
 {
   "model": "stationery.stationery",
   "pk": 2,
   "fields": {
-    "name": "Demi",
-    "description": "Some of our loveliest relationships are with our notebooks – those trusty places to scribble big ideas, little reminders and anything that inspires you throughout the day. Once you’ve chosen between our hardback or softback options, plus whether you want lined, dotted or plain paper inside, personalise your cover with a name, a fun title, your alter ego or a special tribute – anything you like!",
-    "designer": "In-House (Papier)",
+    "name": "Scallop Spine",
+    "description": "Get organised and strike a healthy work-life balance with our daily productivity planner. Inside, there’s space to plan your days and weeks, write to-dos, make schedules and shopping lists, set and review goals, track habits and reflect on your personal growth. You fill out the dates yourself, so you can start using it at any time of the year.",
+    "designer": 2,
     "type": "notebook",
     "users_who_basketed": "none",
-    "price": 19.99,
+    "price": 21.99,
     "quantity": 10,
     "in_stock": true,
-    "image": "https://papier.imgix.net/https%3A%2F%2Fpapier.imgix.net%2Fhttps%253A%252F%252Fwww.papier.com%252Fproduct_image%252F42016%252F25%252Fdemi-10714_front_1585233459.png%3Fixlib%3Drb-3.2.1%26auto%3Dformat%252Ccompress%26s%3D98a71c59bf0389d29565fb12c0ca0dff?ixlib=rb-3.2.1&w=400&h=400&auto=format%2Ccompress&s=ff37cdd9896027a01fd99a911c2c76bd"
+    "image": "https://d1o785do8fyxgx.cloudfront.net/designable_sheets/previews/000/114/778/medium/data.jpg?1597857975"
   }
 }
 ]
