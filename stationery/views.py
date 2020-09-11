@@ -26,5 +26,11 @@ class StationeryDetailView(APIView):
     stationery = self.get_stationery(pk)
     serialized_stationery = StationerySerializer(stationery)
     return Response(serialized_stationery.data, status=status.HTTP_200_OK)
-  
 
+  def put(self, request, pk):
+    stationery_to_update = self.get_stationery(pk=pk)
+    updated_stationery = StationerySerializer(stationery_to_update, data=request.data)
+    if updated_stationery.is_valid():
+      updated_stationery.save()
+      return Response(updated_stationery.data, status=status.HTTP_202_ACCEPTED)
+    return Response(updated_stationery.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
