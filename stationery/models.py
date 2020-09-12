@@ -6,7 +6,7 @@ class Stationery(models.Model):
   description = models.CharField(max_length=500)
   designer = models.ForeignKey('designers.Designer', related_name='stationery', on_delete=models.CASCADE)
   type = models.CharField(max_length=40)
-  users_who_basketed = models.CharField(max_length=100)
+  users_who_basketed = models.ManyToManyField('jwt_auth.User')
   price = models.FloatField()
   quantity = models.IntegerField()
   in_stock = models.BooleanField(default=True)
