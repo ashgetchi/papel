@@ -3,20 +3,20 @@
   "model": "designers.designer",
   "pk": 1,
   "fields": {
-    "name": "Danielle Kroll",
-    "description": "When she was nine, Danielle Kroll won acrylic lessons from a local artist and has been painting ever since. The Brooklyn-based designer takes inspiration from her childhood memories, road trips and thrift shops, creating playful designs that'll make your day a little brighter.",
-    "image": "https://d1o785do8fyxgx.cloudfront.net/designers/images/000/000/050/original/DanielleKroll_PortraitLogo.jpg?1599490200",
-    "location": "New York, USA"
+    "name": "Matilda Goad",
+    "description": "Homeware designer Matilda Goad found cult status with her rainbow-hued cutlery and scallop-edged lampshades. In her debut Papier stationery collection, bistro chair-inspired weave patterns meet ice cream parlour hues and her signature scallop waves in a celebration of colourful, carefree summer days.",
+    "image": "https://d1o785do8fyxgx.cloudfront.net/designers/images/000/000/066/original/MatildaGoad_PortraitLogo.jpg?1599513690",
+    "location": "London, England"
   }
 },
 {
   "model": "designers.designer",
   "pk": 2,
   "fields": {
-    "name": "Matilda Goad",
-    "description": "Homeware designer Matilda Goad found cult status with her rainbow-hued cutlery and scallop-edged lampshades. In her debut Papier stationery collection, bistro chair-inspired weave patterns meet ice cream parlour hues and her signature scallop waves in a celebration of colourful, carefree summer days.",
-    "image": "https://d1o785do8fyxgx.cloudfront.net/designers/images/000/000/066/original/MatildaGoad_PortraitLogo.jpg?1599513690",
-    "location": "London, England"
+    "name": "Danielle Kroll",
+    "description": "When she was nine, Danielle Kroll won acrylic lessons from a local artist and has been painting ever since. The Brooklyn-based designer takes inspiration from her childhood memories, road trips and thrift shops, creating playful designs that'll make your day a little brighter.",
+    "image": "https://d1o785do8fyxgx.cloudfront.net/designers/images/000/000/050/original/DanielleKroll_PortraitLogo.jpg?1599490200",
+    "location": "New York, USA"
   }
 }
 ]

@@ -3,6 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import NotFound
+from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 
 from .models import Stationery
 from .serializers import StationerySerializer
@@ -15,6 +16,8 @@ class StationeryListView(APIView):
     return Response(serialized_stationerys.data, status=status.HTTP_200_OK) #send back as JSON with status 200 OK
 
 class StationeryDetailView(APIView):
+
+  permission_classes = (IsAuthenticatedOrReadOnly)
 
   def get_stationery(self, pk):
       try:

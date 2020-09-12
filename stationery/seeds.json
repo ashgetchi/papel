@@ -3,30 +3,30 @@
   "model": "stationery.stationery",
   "pk": 1,
   "fields": {
-    "name": "Brocade Bird",
+    "name": "Scallop Spine",
     "description": "Some of our loveliest relationships are with our notebooks – those trusty places to scribble big ideas, little reminders and anything that inspires you throughout the day. Once you’ve chosen between our hardback or softback options, plus whether you want lined, dotted or plain paper inside, personalise your cover with a name, a fun title, your alter ego or a special tribute – anything you like!",
     "designer": 1,
     "type": "notebook",
-    "users_who_basketed": "none",
-    "price": 19.99,
+    "users_who_basketed": "0",
+    "price": 21.99,
     "quantity": 10,
     "in_stock": true,
-    "image": "https://papier.imgix.net/https%3A%2F%2Fwww.papier.com%2Fproduct_image%2F41926%2F25%2Fbrocade-bird-10684_front_1585322045.png?ixlib=rb-3.2.1&auto=format%2Ccompress&s=088d6ce3f6b3ab4670f8582a3d75dce6"
+    "image": "https://papier.imgix.net/https%3A%2F%2Fwww.papier.com%2Fproduct_image%2F75339%2F25%2Fscallop-spine-17656_front_1585308033.png?ixlib=rb-3.2.1&auto=format%2Ccompress&s=17e9cf4daed53a2a1b564aed5e0afccc"
   }
 },
 {
   "model": "stationery.stationery",
   "pk": 2,
   "fields": {
-    "name": "Scallop Spine",
-    "description": "Get organised and strike a healthy work-life balance with our daily productivity planner. Inside, there’s space to plan your days and weeks, write to-dos, make schedules and shopping lists, set and review goals, track habits and reflect on your personal growth. You fill out the dates yourself, so you can start using it at any time of the year.",
+    "name": "Brocade Bird",
+    "description": "Some of our loveliest relationships are with our notebooks – those trusty places to scribble big ideas, little reminders and anything that inspires you throughout the day. Once you’ve chosen between our hardback or softback options, plus whether you want lined, dotted or plain paper inside, personalise your cover with a name, a fun title, your alter ego or a special tribute – anything you like!",
     "designer": 2,
     "type": "notebook",
-    "users_who_basketed": "none",
-    "price": 21.99,
+    "users_who_basketed": "0",
+    "price": 19.99,
     "quantity": 10,
     "in_stock": true,
-    "image": "https://d1o785do8fyxgx.cloudfront.net/designable_sheets/previews/000/114/778/medium/data.jpg?1597857975"
+    "image": "https://papier.imgix.net/https%3A%2F%2Fwww.papier.com%2Fproduct_image%2F41926%2F25%2Fbrocade-bird-10684_front_1585322045.png?ixlib=rb-3.2.1&auto=format%2Ccompress&s=088d6ce3f6b3ab4670f8582a3d75dce6"
   }
 }
 ]
