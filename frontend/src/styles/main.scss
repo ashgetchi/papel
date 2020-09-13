@@ -15,12 +15,6 @@
   justify-content: center;
 }
 
-// .content-box:hover {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   transform: scale(1.2)
-// }
 
 .gig-card {
   margin-top: 10px;
@@ -29,8 +23,10 @@
 
 .gig-card:hover {
   transform: scale(1.1)
-
 }
 
 
-
+.stationery-show-description {
+  display: flex;
+  flex-grow: 0.5;
+}
