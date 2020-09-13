@@ -3,3 +3,34 @@
 .navbar-item img {
   max-height: 4rem;
 }
+
+.content-font {
+  font-family: "Miller Text", "Georgia", "Times New Roman", Times, serif;
+  display: flex;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// .content-box:hover {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   transform: scale(1.2)
+// }
+
+.gig-card {
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.gig-card:hover {
+  transform: scale(1.1)
+
+}
+
+
+
