@@ -17,7 +17,7 @@ class StationeryListView(APIView):
 
 class StationeryDetailView(APIView):
 
-  permission_classes = (IsAuthenticatedOrReadOnly)
+  permission_classes = (IsAuthenticatedOrReadOnly),
 
   def get_stationery(self, pk):
       try:

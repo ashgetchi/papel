@@ -25,9 +25,9 @@ class Navbar extends React.Component {
     Our Designers
               </a>
               <div className="navbar-item has-dropdown is-hoverable">
-                <a className="navbar-link">
-      Stationery
-                </a>
+                <Link to="/stationery" className="navbar-item">
+            Stationery
+                </Link>
 
                 <div className="navbar-dropdown">
                   <a className="navbar-item">
@@ -60,4 +60,4 @@ class Navbar extends React.Component {
   }
 }
 
-export default Navbar
+export default withRouter(Navbar)
