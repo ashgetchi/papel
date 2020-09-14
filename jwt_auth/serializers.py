@@ -27,4 +27,7 @@ class UserSerializer(serializers.ModelSerializer):
     model = User
     fields = '__all__'
     
-
+class PopulatedUserSerializer(UserSerializer):
+  
+    user = UserSerializer(many=True)
+    

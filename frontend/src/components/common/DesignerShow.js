@@ -26,7 +26,7 @@ class DesignerShow extends React.Component {
     } else {
       console.log(this.state.designer.stationery)
       return (
-        <>
+        <div className=''>
           <div className="three-col content-font">
             <div className="column is-one-third-desktop is-one-third-tablet is-fullwidth has-text-centered">
               {/* <Link to={`/gigs/${_id}`}> */}
@@ -56,12 +56,16 @@ class DesignerShow extends React.Component {
 
             </div>
           </div>
+          <h1>Shop their designs!</h1>
           <div>{this.state.designersStationery.map(name=>{
             return (
-              <h1 key={name.id}>{name.name}</h1>
+              <>
+                <h1 key={name.id}>{name.name}</h1>
+                <img src={name.image}/>
+              </>
             )
           })}</div>
-        </>
+        </div>
 
       )
     }

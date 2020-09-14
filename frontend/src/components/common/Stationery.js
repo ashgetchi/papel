@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import { Link, withRouter } from 'react-router-dom'
+
 
 class Stationery extends React.Component {
 
@@ -28,8 +30,8 @@ class Stationery extends React.Component {
             //   <h2>{stat.name}</h2>
             //   <img src={stat.image}/>
             // </div>
-
-              <div className="column is-one-third-desktop is-one-third-tablet is-fullwidth has-text-centered" key={stat.id}>
+              <Link to={`/stationery/${stat.id}`} className="column is-one-third-desktop is-one-third-tablet is-fullwidth has-text-centered" key={stat.id}>
+          
                 {/* <Link to={`/gigs/${_id}`}> */}
 
                 <div className="gig-card">
@@ -55,10 +57,13 @@ class Stationery extends React.Component {
 
 
                 </div>
+            
 
-                {/* </Link> */}
+              </Link>
 
-              </div>
+       
+              
+              
 
             )
           })}
@@ -68,4 +73,4 @@ class Stationery extends React.Component {
   }
 }
 
-export default Stationery
+export default withRouter(Stationery)

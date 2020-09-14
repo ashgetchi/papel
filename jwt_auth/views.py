@@ -6,8 +6,9 @@ from rest_framework import status
 from django.contrib.auth import get_user_model
 from django.conf import settings
 import jwt
+from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 
-from .serializers import UserSerializer
+from .serializers import PopulatedUserSerializer, UserSerializer
 User = get_user_model()
 
 class Register(APIView):
@@ -39,13 +40,13 @@ class LoginView(APIView):
     algorithm='HS256')
     return Response({'token': token, 'message': f'Welcome back {user.username}'})
   
-  # class ProfileView(APIView):
+  class ProfileView(APIView):
 
-  #   permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated, )
 
-  #   def get(self, request):
-  #       user = User.objects.get(pk=request.user.id)
-  #       serialized_user = PopulatedUserSerializer(user)
-  #       return Response(serialized_user.data)
+    def get(self, request):
+        user = User.objects.get(pk=request.user.id)
+        serialized_user = PopulatedUserSerializer(user)
+        return Response(serialized_user.data)
 
 

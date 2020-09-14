@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Link, withRouter } from 'react-router-dom'
 
 class Designers extends React.Component {
 
@@ -39,7 +40,7 @@ class Designers extends React.Component {
                     <div className="card-content has-text-centered">
                       <h5 className="">{stat.location}</h5>
                       <h5 className="">{stat.designer}</h5>
-                      <a href='www.google.com'>See their designs</a>
+                      <Link to={`/designers/${stat.id}`}>See their designs</Link>
                     </div>
                   </div>
 
@@ -61,4 +62,4 @@ class Designers extends React.Component {
   }
 }
 
-export default Designers
+export default withRouter(Designers)
