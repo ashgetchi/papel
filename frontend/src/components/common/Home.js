@@ -8,6 +8,7 @@ const Home = () => {
       <h1 className="welcome">Welcome to Papel! 
       Great design made even simpler
       </h1>
+      
       <div className="homepage-wrapper">
       
         <Link to ="/stationery" className="shop-by-stationery">

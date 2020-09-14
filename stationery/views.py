@@ -8,6 +8,7 @@ from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnl
 from .models import Stationery
 from .serializers import StationerySerializer
 
+
 class StationeryListView(APIView):
 
   def get(self, _request):

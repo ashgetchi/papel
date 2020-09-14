@@ -35,7 +35,9 @@
 
 .stationery-show-description {
   display: flex;
-  // flex-grow: 0.5;
+  flex-grow: 0.33;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .flex {
@@ -44,6 +46,12 @@
 }
 
 //! HOMEPAGE CSS // 
+
+
+.logo {
+  height: 150px;
+  width: 150px;
+}
 
 .homepage-wrapper {
   display: flex;
@@ -118,6 +126,10 @@ flex-direction: column;
 }
 
 .welcome {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
   text-align: center;
   font-size: 25px;
 }
