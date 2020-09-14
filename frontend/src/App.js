@@ -7,6 +7,7 @@ import DesignerShow from './components/common/DesignerShow'
 import StationeryShow from './components/common/StationeryShow'
 import Home from './components/common/Home'
 import Basket from './components/common/Basket'
+import Login from './components/auth/login'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route exact path="/designers/:id" component={DesignerShow}/>
           <Route exact path="/stationery/:id" component={StationeryShow}/>
           <Route exact path="/basket/" component={Basket}/>
+          <Route exact path="/login/" component={Login}/>
           <Route exact path="/" component={Home}/>
 
 

@@ -51,9 +51,9 @@ class Navbar extends React.Component {
                   <a className="button is-link">
                     <strong>Sign up</strong>
                   </a>
-                  <a className="button is-light">
+                  <Link to="/login" className="button is-light">
         Log in
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
