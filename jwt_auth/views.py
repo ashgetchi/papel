@@ -40,13 +40,14 @@ class LoginView(APIView):
     algorithm='HS256')
     return Response({'token': token, 'message': f'Welcome back {user.username}'})
   
-  class ProfileView(APIView):
+
+class ProfileView(APIView):
 
     permission_classes = (IsAuthenticated, )
 
     def get(self, request):
         user = User.objects.get(pk=request.user.id)
-        serialized_user = PopulatedUserSerializer(user)
+        serialized_user = UserSerializer(user)
         return Response(serialized_user.data)
 
 

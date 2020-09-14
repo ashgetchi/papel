@@ -48,9 +48,9 @@ class Navbar extends React.Component {
                   <Link to ='/basket'>
                     <img className="basket-img" src="https://icon-library.com/images/grocery-basket-icon/grocery-basket-icon-13.jpg"/>
                   </Link>
-                  <a className="button is-link">
+                  <Link to="/register" className="button is-link">
                     <strong>Sign up</strong>
-                  </a>
+                  </Link>
                   <Link to="/login" className="button is-light">
         Log in
                   </Link>
