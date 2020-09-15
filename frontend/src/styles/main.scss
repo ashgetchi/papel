@@ -34,8 +34,51 @@
 .wrapper-designer-show {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex-grow: 2;
+  width: 400px;
   align-content: center;
+  align-self: center;
+  height: auto;
+}
+.wrapper-designer-show-background {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  
+  align-content: center;
+  align-self: center;
+  background-color: rgba(0,0,0,0.8);
+  width: 100vw;
+  color: white;
+}
+
+.shop-their-designs-card {
+  display: flex;
+  // flex-direction: row;
+  align-self: center;
+  flex-grow: 1;
+  height: 200px;
+  width: 400px;
+}
+
+.shop-their-designs-wrapper {
+  display: flex;
+  // flex-direction: row;
+  align-self: center;
+  flex-grow: 1;
+  height: 200px;
+  width: 400px;
+}
+
+.everything-wrapper {
+  display: flex;
+  flex-direction: column;
+  // height: 100vh;
+  align-content: center;
+}
+
+.shop-their-designs{
+  text-align: center
 }
 
 //! STATIONERY SHOW 
@@ -184,5 +227,12 @@ flex-direction: column;
   margin-right: 10px;
 }
 
-//! DESIGNER SHOW PAGE
+//! BASKET PAGE
 
+.basket-wrapper {
+  display: flex;
+}
+
+.basket-text {
+  text-align: center;
+}
