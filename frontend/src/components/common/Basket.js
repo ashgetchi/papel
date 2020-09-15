@@ -39,8 +39,14 @@ class Basket extends React.Component {
     },0)
     console.log(totalNumber)
     return totalNumber
+  }
 
-
+  deleteItem = async (event) => {
+    try {
+      await axios.delete(`http://localhost:3000/api/stationery/${event.target.value}`,withHeaders())
+    } catch (err) {
+      console.log(err)
+    } 
   }
   
 
@@ -71,14 +77,17 @@ class Basket extends React.Component {
                   <div className="card-content has-text-centered">
                     <h5 className="">{item.type}</h5>
                     <h5 className="">£{item.price}</h5>
-                    <button className="button is-danger is-small">remove</button>
+                    <button className="button is-danger is-small" value={item.id} onClick={this.deleteItem}>remove</button>
                   </div>
                 </div>
               </div>        
             </Link>    
           })}
         </div>
-        <h1 className="basket-text">Your Basket Total Is:{this.basketValue()}</h1>
+        <div className="checkout-box">
+          <h1 className="basket-text">Your Basket Total Is:{this.basketValue()}</h1>
+          <button className="button is-link">checkout</button>
+        </div>
       </>
     )
   }

@@ -17,11 +17,13 @@ class Designers extends React.Component {
   render(){
     return ( 
       <>
-        <div className="three-col content-font">
+   
+        <div className="four-col content-font">
+        <div className="designer-show-wrapper">
           {this.state.designers.map(stat => {
             return (
     
-              <div className="column is-one-third-desktop is-one-third-tablet is-fullwidth has-text-centered" key={stat.id}>
+              <div className="column is-one-third-desktop is-one-third-tablet is-fullwidth has-text-centered designer-show-card" key={stat.id}>
                 {/* <Link to={`/gigs/${_id}`}> */}
 
                 <div className="gig-card">
@@ -53,6 +55,7 @@ class Designers extends React.Component {
 
             )
           })}
+        </div>
         </div>
       </>
     

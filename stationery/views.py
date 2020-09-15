@@ -40,3 +40,8 @@ class StationeryDetailView(APIView):
     stationery_to_add.users_who_basketed.add(user_to_update)
     serialized_stationery = StationerySerializer(stationery_to_add)
     return Response (serialized_stationery.data)
+
+  def delete(self, request, pk):
+    stationery_to_delete = self.get_stationery(pk)
+    stationery_to_delete.users_who_basketed.delattr(stationery_to_delete)
+    return Response(status=status.HTTP_204_NO_CONTENT)

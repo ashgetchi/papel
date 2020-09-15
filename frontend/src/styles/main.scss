@@ -18,6 +18,10 @@
 
 
 //! STATIONERY INDEX 
+.stationery-index-wrapper{
+  display: flex;
+  flex-wrap: wrap;;
+}
 .buttonsWrapper {
   display: flex;
   justify-content: center;
@@ -26,15 +30,27 @@
 .buttonsWrapper button {
   display: flex;
   justify-content: center;
-  margin: 10px;
+  margin: 20px;
 }
+
+//! DESIGNER INDEX
+
+.designer-show-wrapper{
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
   
+}
+
+.designer-show-card:nth-child(3n){
+  line-break: after;   
+}
 //! DESIGNER SHOW PAGE
 
 .wrapper-designer-show {
   display: flex;
   flex-direction: column;
-  flex-grow: 2;
+  // flex-grow: 2;
   width: 400px;
   align-content: center;
   align-self: center;
@@ -43,7 +59,7 @@
 .wrapper-designer-show-background {
   display: flex;
   flex-direction: column;
-  flex-grow: 2;
+  // flex-grow: 2;
   
   align-content: center;
   align-self: center;
@@ -56,7 +72,6 @@
   display: flex;
   // flex-direction: row;
   align-self: center;
-  flex-grow: 1;
   height: 200px;
   width: 400px;
 }
@@ -65,9 +80,6 @@
   display: flex;
   // flex-direction: row;
   align-self: center;
-  flex-grow: 1;
-  height: 200px;
-  width: 400px;
 }
 
 .everything-wrapper {
@@ -231,8 +243,24 @@ flex-direction: column;
 
 .basket-wrapper {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .basket-text {
   text-align: center;
+}
+
+.checkout-box {
+  display: flex;
+  flex-direction: column;
+}
+
+//! CHECKOUT PAGE
+
+.checkout-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

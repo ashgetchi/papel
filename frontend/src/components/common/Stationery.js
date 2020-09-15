@@ -47,7 +47,7 @@ class Stationery extends React.Component {
           <button className="button is-link is-outlined" value="notebook" onClick={this.handleClick}>notebooks</button>
           <button className="button is-danger is-outlined" value="Diary" onClick={this.handleClick}>Diary</button>
         </div>
-        <div className="three-col content-font">
+        <div className="three-col content-font stationery-index-wrapper">
           
           {this.state.search.map(stat => {
             return (

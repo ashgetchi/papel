@@ -36,8 +36,8 @@ class Register extends React.Component {
 
       <section>
 
-        <div className="hero-gigs-indv text-center">
-          <div className="hero-gigs-indv-txt">
+        <div className="">
+          <div className="text-has-centered">
             <h2>Sign Up</h2>
             <h4>Register with GigMe below!</h4>
           </div>
