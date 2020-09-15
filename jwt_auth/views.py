@@ -9,6 +9,7 @@ import jwt
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 
 from .serializers import PopulatedUserSerializer, UserSerializer
+
 User = get_user_model()
 
 class Register(APIView):
@@ -43,7 +44,7 @@ class LoginView(APIView):
 
 class ProfileView(APIView):
 
-    permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated),
 
     def get_user(self, email):
       try:
@@ -54,15 +55,9 @@ class ProfileView(APIView):
 
     def get(self, request):
         user = User.objects.get(pk=request.user.id)
-        serialized_user = UserSerializer(user)
+        serialized_user = PopulatedUserSerializer(user)
         return Response(serialized_user.data)
 
-    def put(self, request, pk):
-        profile_to_update = self.get_user(request.user.id)
-        updated_profile = UserSerializer(profile_to_update, data=request.data)
-        if profile_to_update.is_valid():
-            updated_profile.save()
-            return Response(updated_profile.data, status=status.HTTP_202_ACCEPTED)
-        return Response(updated_profile.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
 
 

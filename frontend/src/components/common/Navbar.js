@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
+import { isAuthenticated, logout } from '../../lib/auth'
 
 class Navbar extends React.Component {
   render(){
+    const isLoggedIn = isAuthenticated()
     return (
+      
       <>
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
@@ -31,29 +34,35 @@ class Navbar extends React.Component {
             Stationery
                 </Link>
 
-                <div className="navbar-dropdown">
-                  <a className="navbar-item">
-        Notebooks
-                  </a>
-                  <a className="navbar-item">
-        Diaries
-                  </a>
-                </div>
               </div>
             </div>
 
             <div className="navbar-end">
               <div className="navbar-item">
                 <div className="buttons">
-                  <Link to ='/basket'>
-                    <img className="basket-img" src="https://icon-library.com/images/grocery-basket-icon/grocery-basket-icon-13.jpg"/>
-                  </Link>
-                  <Link to="/register" className="button is-link">
-                    <strong>Sign up</strong>
-                  </Link>
-                  <Link to="/login" className="button is-light">
+               
+                  {isLoggedIn ?
+                    <>
+                      <Link to ='/basket'>
+                        <img className="basket-img" src="https://icon-library.com/images/grocery-basket-icon/grocery-basket-icon-13.jpg"/>
+                      </Link>
+                      <Link to ='/'>
+                        <button className="button is-link"
+                          onClick={logout}>Log out</button>
+                      </Link>
+                    </>
+                    :
+                    <>
+                      <Link to="/register" className="button is-link">
+                        <strong>Sign up</strong>
+                      </Link>
+                      <Link to="/login" className="button is-light">
         Log in
-                  </Link>
+                      </Link>
+                    </>
+                  }
+                 
+             
                 </div>
               </div>
             </div>

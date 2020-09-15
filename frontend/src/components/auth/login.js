@@ -65,7 +65,7 @@ class Login extends React.Component {
                 <label className="label">Email</label>
                 <div className="control">
                   <input
-                    className={`input ${this.state.error ? 'is-danger': '' }`}
+                    className={`input ${this.state.error ? 'is-danger' : '' }`}
                     placeholder="Email"
                     name="email"
                     onChange={this.handleChange}

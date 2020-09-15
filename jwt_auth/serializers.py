@@ -2,6 +2,7 @@ from rest_framework import serializers
 from django.contrib.auth import get_user_model, password_validation
 from django.contrib.auth.hashers import make_password
 from django.core.exceptions import ValidationError
+from stationery.serializers import StationerySerializer
 
 User = get_user_model()
 
@@ -28,6 +29,5 @@ class UserSerializer(serializers.ModelSerializer):
     fields = '__all__'
     
 class PopulatedUserSerializer(UserSerializer):
-  
-    user = UserSerializer(many=True)
+    basket = StationerySerializer(many=True)
     

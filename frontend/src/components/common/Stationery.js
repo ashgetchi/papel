@@ -6,25 +6,50 @@ import { Link, withRouter } from 'react-router-dom'
 class Stationery extends React.Component {
 
   state = {
-    stationery: []
+    stationery: [],
+    search: []
   }
 
   async componentDidMount() {
     try {
       const res = await axios.get('http://localhost:3000/api/stationery/')
       this.setState({ stationery: res.data })
+      this.allEvents()
       console.log(res.data)
     } catch (err) {
       console.log(err)
     }
   }
 
+  handleClick = async event => {
+    event.preventDefault()
+    const results = this.state.stationery.filter(item => (
+      item.type === event.target.value
+      
+    ))
+    this.setState({ search: results })
+    console.log(this.state.search)
+    console.log(event.type.value)
+  }
+
+  allEvents = async () => {
+    const res = await axios.get('http://localhost:3000/api/stationery/')
+    this.setState({ search: res.data })
+  }
+
+
+
   render(){
     
     return (
       <>
+        <div className="buttonsWrapper" >
+          <button className="button is-link is-outlined" value="notebook" onClick={this.handleClick}>notebooks</button>
+          <button className="button is-danger is-outlined" value="Diary" onClick={this.handleClick}>Diary</button>
+        </div>
         <div className="three-col content-font">
-          {this.state.stationery.map(stat => {
+          
+          {this.state.search.map(stat => {
             return (
             // <div className="three-col-content" key={stat.id}>
             //   <h2>{stat.name}</h2>

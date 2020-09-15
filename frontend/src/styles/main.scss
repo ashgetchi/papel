@@ -16,6 +16,28 @@
   height: 100vh;
 }
 
+
+//! STATIONERY INDEX 
+.buttonsWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonsWrapper button {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+  
+//! DESIGNER SHOW PAGE
+
+.wrapper-designer-show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
 //! STATIONERY SHOW 
 
 .content-box {
@@ -161,3 +183,6 @@ flex-direction: column;
 .basket-img{
   margin-right: 10px;
 }
+
+//! DESIGNER SHOW PAGE
+

@@ -5,8 +5,10 @@ from rest_framework import status
 from rest_framework.exceptions import NotFound
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 
+# from ..jwt_auth.models import User
 from .models import Stationery
 from .serializers import StationerySerializer
+import jwt
 
 
 
@@ -32,10 +34,9 @@ class StationeryDetailView(APIView):
     serialized_stationery = StationerySerializer(stationery)
     return Response(serialized_stationery.data, status=status.HTTP_200_OK)
 
-  def put(self, request):
-    user_to_update = self.get_stationery(request.user.id)
-    # updated_profile = UserSerializer(user_to_update, data=request.data)
-    if updated_profile.is_valid():
-      updated_profile.save()
-      return Response(updated_profile.data, status=status.HTTP_202_ACCEPTED)
-    return Response(updated_profile.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+  def put(self, request, pk):
+    user_to_update =request.user.id
+    stationery_to_add = Stationery.objects.get(pk=pk)
+    stationery_to_add.users_who_basketed.add(user_to_update)
+    serialized_stationery = StationerySerializer(stationery_to_add)
+    return Response (serialized_stationery.data)

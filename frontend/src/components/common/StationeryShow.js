@@ -14,7 +14,7 @@ class StationeryShow extends React.Component {
   async componentDidMount() {
     try {
       const stationeryID = this.props.match.params.id
-      const res = await axios.get(`http://localhost:3000/api/stationery/${stationeryID}`)
+      const res = await axios.get(`http://localhost:3000/api/stationery/${stationeryID}`, withHeaders())
       console.log(res.data)
       this.setState({ stationery: res.data })
     } catch (err) {
@@ -24,10 +24,9 @@ class StationeryShow extends React.Component {
 
     addToUserBasket = async(event) => {
       event.preventDefault()
+      const stationery = this.props.match.params.id
       try {
-        this.setState({ basket: [this.state.stationery.id] })
-        console.log(this.state.stationery.id)
-        await axios.put('http://localhost:3000/api/users/profile/', this.state.basket, withHeaders())
+        await axios.put(`http://localhost:3000/api/stationery/${stationery}/`, null, withHeaders())
       } catch (err) {
         console.log(err)
       }
