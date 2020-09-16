@@ -47,10 +47,11 @@ class Navbar extends React.Component {
                         <button className="button is-link"
                           onClick={logout}>Log out</button>
                       </Link>
+                      
                     </>
                     :
                     <>
-                      <Link to="/register" className="button is-link">
+                      <Link to="/register2" className="button is-link">
                         <strong>Sign up</strong>
                       </Link>
                       <Link to="/login" className="button is-light">

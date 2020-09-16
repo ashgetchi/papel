@@ -42,6 +42,7 @@ class StationeryDetailView(APIView):
     return Response (serialized_stationery.data)
 
   def delete(self, request, pk):
-    stationery_to_delete = self.get_stationery(pk)
-    stationery_to_delete.users_who_basketed.delattr(stationery_to_delete)
+    user_to_update = request.user.id
+    stationery_to_delete = Stationery.objects.get(pk=pk)
+    stationery_to_delete.users_who_basketed.remove(user_to_update)
     return Response(status=status.HTTP_204_NO_CONTENT)
