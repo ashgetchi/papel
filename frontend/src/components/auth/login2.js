@@ -1,45 +1,42 @@
 import React from 'react'
-// import Select from 'react-select'
-import axios from 'axios'
-// import { registerUser } from '../../lib/api'
-import { Link, withRouter } from 'react-router-dom'
+// import { loginUser } from '../../lib/api'
 import { setToken } from '../../lib/auth'
+// import { popupNotification } from '../../lib/notification'
+import axios from 'axios'
+import { Link, withRouter } from 'react-router-dom'
 
 
-class Register2 extends React.Component {
-
+class Login2 extends React.Component {
   state = {
     formData: {
       username: '',
       email: '',
-      password: '',
-      password_confirmation: ''
-    }
-
-    
+      password: ''
+    },
+    error: false
   }
 
   handleChange = event => {
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
-    this.setState({ formData })
+    this.setState({ formData, error: false })
   }
 
   handleSubmit = async event => {
     event.preventDefault()
-    console.log(this.state.formData)
     try {
-      await axios.post('http://localhost:3000/api/users/register/', this.state.formData)
       const res = await axios.post('http://localhost:3000/api/users/login/', this.state.formData)
-      this.props.history.push('/login2')
       setToken(res.data.token)
+      // popupNotification(`welcome  ${this.state.formData.username}`)
+      this.props.history.push('/home')
     } catch (err) {
-      console.log(err)
+      this.setState({ error: true })
     }
   }
-  
+
   render() {
     return (
 
+    
       <div className="container-register-page">
         <section className="container-register">
           <div className="columns is-multiline">
@@ -47,12 +44,11 @@ class Register2 extends React.Component {
               <div className="columns">
                 <div className="column left">
                   <h1 className="title is-1">PAPEL</h1>
-                  <h2 className="subtitle colored is-4">Great design made simple</h2>
-                  <p>Sign up here if its your first time, otherwise <Link to="/login2">login here </Link>.</p>
+                  <h2 className="subtitle colored is-4">Great design, made even simpler</h2>
+                  <p>Please sign in with us here.</p>
                 </div>
                 <div className="column right has-text-centered">
-                  <h1 className="title is-4">Sign up today</h1>
-                  <p className="description">We don't do spam dont worry</p>
+                  <h1 className="title is-4">Sign in!</h1>
                   <form onSubmit={this.handleSubmit}>
                     <div className="field">
                       <div className="control">
@@ -70,12 +66,7 @@ class Register2 extends React.Component {
                         <input className="input is-medium" type="password" placeholder="password" name="password" value={this.state.formData.password} onChange={this.handleChange}/>
                       </div>
                     </div>
-                    <div className="field">
-                      <div className="control">
-                        <input className="input is-medium" type="password" placeholder="confirm password" name="password_confirmation" value={this.state.formData.password_confirmation} onChange={this.handleChange}/>
-                      </div>
-                    </div>
-                    <button className="button is-block is-primary is-fullwidth is-medium">Sign Up</button>
+                    <button className="button is-block is-primary is-fullwidth is-medium">Log in</button>
                     <br />
                     <small><em>Created by Ash Atighetchi.</em></small>
                   </form>
@@ -87,10 +78,8 @@ class Register2 extends React.Component {
         <div className="photo-container-register">
         </div>
       </div>
-
-
     )
   }
 }
 
-export default withRouter(Register2)
+export default withRouter(Login2)

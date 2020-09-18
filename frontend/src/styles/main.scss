@@ -10,6 +10,7 @@
   max-height: 4rem;
 }
 
+
 .content-font {
   font-family: "Miller Text", "Georgia", "Times New Roman", Times, serif;
   display: flex;
@@ -70,16 +71,23 @@
 
 .shop-their-designs-card {
   display: flex;
-  // flex-direction: row;
-  align-self: center;
-  height: 200px;
+  // flex-direction: column;
+  flex-direction: row;
+  align-self: flex-start;
+  justify-content: flex-start;
+  height: 50vh;
   width: 400px;
+  margin: 20px;
 }
 
 .shop-their-designs-wrapper {
   display: flex;
-  // flex-direction: row;
+  // flex-direction: column;
+  flex-direction: row;
   align-self: center;
+  justify-content: center;
+  flex-grow: 1;
+  height: 50vh;
 }
 
 .everything-wrapper {
@@ -87,13 +95,20 @@
   flex-direction: column;
   // height: 100vh;
   align-content: center;
+  
 }
 
 .shop-their-designs{
-  text-align: center
+  text-align: center;
+  font-weight: bold;
+  margin-left: 30px;
 }
 
 //! STATIONERY SHOW 
+
+.the-everything-wrapper{
+  display: flex;
+}
 
 .content-box {
   display: flex;
@@ -107,11 +122,29 @@
 }
 
 .wrapper-stationery-show {
-  height: 100vh;
   display: flex;
   justify-content: center;
-
+  // align-content: flex-end;
+  text-align: center;
+  height: 80vh;
+  width: 80vw;
 }
+
+.description-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  height: 80vh;
+  background-color: white;
+}
+
+.wrapper-image-stationery {
+  height: 60vh;
+  width: 60vw;
+}
+
 
 .gig-card {
   margin-top: 10px;
@@ -131,19 +164,29 @@
   flex-direction: row;
 }
 
+.stationery-image-wrapper {
+  display: flex;
+  flex-grow: 1;
+}
+
+.description-box-stationery{
+  display: flex;
+  flex-grow: 2;
+}
 .card-content {
   flex-grow: 2;
 }
 
 .card-description {
   flex-grow: 1;
-  max-width: 20vw;
+  // max-width: 20vw;
 }
 
 .flex {
   display: flex;
   width: 100vw;
 }
+
 
 //! HOMEPAGE CSS // 
 
@@ -245,10 +288,13 @@ flex-direction: column;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 30px;
 }
 
 .basket-text {
   text-align: center;
+  font-weight: bold;
+  margin: 10px;
 }
 
 .checkout-box {
@@ -263,6 +309,11 @@ flex-direction: column;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.checkout-button {
+  display: flex;
+  justify-content: center;
 }
 
 //! Register Page

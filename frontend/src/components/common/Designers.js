@@ -19,43 +19,43 @@ class Designers extends React.Component {
       <>
    
         <div className="four-col content-font">
-        <div className="designer-show-wrapper">
-          {this.state.designers.map(stat => {
-            return (
+          <div className="designer-show-wrapper">
+            {this.state.designers.map(stat => {
+              return (
     
-              <div className="column is-one-third-desktop is-one-third-tablet is-fullwidth has-text-centered designer-show-card" key={stat.id}>
-                {/* <Link to={`/gigs/${_id}`}> */}
+                <div className="column is-one-third-desktop is-one-third-tablet is-fullwidth has-text-centered designer-show-card" key={stat.id}>
+                  {/* <Link to={`/gigs/${_id}`}> */}
 
-                <div className="gig-card">
-                  <div className="card-header content-box">
-                    <h2 className="has-text-centered gig-card">{stat.name}</h2>
-                  </div>
-
-                  <div className="card-image">
-                    <figure className="image image is-1by1">
-                  
-                      <img src={stat.image} alt={stat.name} loading="lazy" width="300" height="220" />
-                    </figure>
-                  </div>
-
-                  <div className="card-header has-text-centered content-box">
-                    <div className="card-content has-text-centered">
-                      <h5 className="">{stat.location}</h5>
-                      <h5 className="">{stat.designer}</h5>
-                      <Link to={`/designers/${stat.id}`}>See their designs</Link>
+                  <div className="gig-card">
+                    <div className="card-header content-box">
+                      <h2 className="has-text-centered gig-card">{stat.name}</h2>
                     </div>
+
+                    <div className="card-image">
+                      <figure className="image image is-1by1">
+                  
+                        <img src={stat.image} alt={stat.name} loading="lazy" width="300" height="220" />
+                      </figure>
+                    </div>
+
+                    <div className="card-header has-text-centered content-box">
+                      <div className="card-content has-text-centered">
+                        <h5 className="">{stat.location}</h5>
+                        <h5 className="">{stat.designer}</h5>
+                        <Link to={`/designers/${stat.id}`}>See their designs</Link>
+                      </div>
+                    </div>
+
+
                   </div>
 
+                  {/* </Link> */}
 
                 </div>
 
-                {/* </Link> */}
-
-              </div>
-
-            )
-          })}
-        </div>
+              )
+            })}
+          </div>
         </div>
       </>
     

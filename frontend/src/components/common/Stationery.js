@@ -44,8 +44,9 @@ class Stationery extends React.Component {
     return (
       <>
         <div className="buttonsWrapper" >
-          <button className="button is-link is-outlined" value="notebook" onClick={this.handleClick}>notebooks</button>
-          <button className="button is-danger is-outlined" value="Diary" onClick={this.handleClick}>Diary</button>
+          <button className="button is-link is-outlined" value="notebook" onClick={this.handleClick}>Notebooks</button>
+          <button className="button is-link is-outlined" value="Diary" onClick={this.handleClick}>Diaries</button>
+          <button className="button is-danger is-outlined" value="Diary" onClick={this.allEvents}>All</button>
         </div>
         <div className="three-col content-font stationery-index-wrapper">
           
@@ -74,8 +75,6 @@ class Stationery extends React.Component {
                   <div className="card-header has-text-centered content-box">
                     <div className="card-content has-text-centered">
                       <h5 className="">{stat.type}</h5>
-                      <h5 className="">{stat.designer}</h5>
-                      <h5 className="">{stat.quantity}</h5>
                       <h5 className="">£{stat.price}</h5>
                     </div>
                   </div>

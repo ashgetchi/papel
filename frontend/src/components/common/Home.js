@@ -5,10 +5,10 @@ import { Link, withRouter } from 'react-router-dom'
 const Home = () => {
   return (
     <>
-      <h1 className="welcome">Welcome to Papel! 
+      {/* <h1 className="welcome">Welcome to Papel! 
       Great design made even simpler
       </h1>
-      
+       */}
       <div className="homepage-wrapper">
       
         <Link to ="/stationery" className="shop-by-stationery">

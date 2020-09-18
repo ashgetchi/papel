@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Link, withRouter } from 'react-router-dom'
 
 class DesignerShow extends React.Component {
 
@@ -26,6 +27,7 @@ class DesignerShow extends React.Component {
     } else {
       console.log(this.state.designer.stationery)
       return (
+        <>
         <div className='everything-wrapper'>
           <div className='wrapper-designer-show-background'>
             <div className='wrapper-designer-show'>
@@ -49,24 +51,35 @@ class DesignerShow extends React.Component {
             </div>
           </div>
           <div>
-            <h1 className="shop-their-designs">Shop their designs!</h1>
+            <h1 className="shop-their-designs"> Shop Their designs!</h1>
           </div>
-          <div className="shop-their-designs-wrapper">
+          </div>
+          
+          <div>
+            <div className="shop-their-designs-wrapper">{this.state.designersStationery.map(name=>{
+              return (
+                <>
+                 <div className="shop-their-designs-card">
+                  <Link to={`/stationery/${name.id}`} >
+                  <img src={name.image} key={name.id}/>
+                  </Link>
+                  </div>
+                  
+               
+        
+                  
+                </>
+              )
+            })}</div>
+            </div>
+          </>
             
-              <div className="shop-their-designs-card">{this.state.designersStationery.map(name=>{
-                return (
-                  <>
-                    <h1 key={name.id}>{name.name}</h1>
-                    <img src={name.image}/>
-                  </>
-                )
-              })}</div>
-          </div>
-        </div>
+           
+       
 
       )
     }
   }
 }
 
-export default DesignerShow
+export default withRouter(DesignerShow)
