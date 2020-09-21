@@ -13,22 +13,22 @@ class Navbar extends React.Component {
          
               <div id="navbarBasicExample" className="navbar-menu">
           
-              <div className="navbar-item navbar-start">
+                <div className="navbar-item navbar-start">
           
-                <div className="buttons">
+                  <div className="buttons">
                   
-                  <div className="navbar-brand">
-                    <Link to="/home" className="navbar-item" href="https://bulma.io">
+                    <div className="navbar-brand">
+                      <Link to="/home" className="navbar-item" href="https://bulma.io">
              
-                      <img src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/kokzr0iirfwrctlygob2" alt="logo"/>
+                        <img src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/kokzr0iirfwrctlygob2" alt="logo"/>
              
-                    </Link>
+                      </Link>
                     </div>
                     <div className="navbar-item">
                       <Link to="/stationery" className="navbar-item">
             Stationery
                       </Link>
-                      </div>
+                    </div>
 
                     
                     <div className="navbar-item">
@@ -36,29 +36,29 @@ class Navbar extends React.Component {
     Our Designers
                       </Link>
                     </div>
-                    </div>
-                    </div>
+                  </div>
+                </div>
               
-                  <div className="navbar-item navbar-end">
-                    <div className="buttons">
-                      <div className="navbar-end">
-                        <Link to ='/basket'>
+                <div className="navbar-item navbar-end">
+                  <div className="buttons">
+                    <div className="navbar-end">
+                      <Link to ='/basket'>
                         <div className="navbar-item
 ">
                           <img className="basket-img image is-48x48" src="https://icon-library.com/images/grocery-basket-icon/grocery-basket-icon-13.jpg" />
-                          </div>
-                        </Link>
-                      </div>
-                      <div className="navbar-item">
-                        <Link to ='/'>
-                          <div className="navbar-item">
+                        </div>
+                      </Link>
+                    </div>
+                    <div className="navbar-item">
+                      <Link to ='/'>
+                        <div className="navbar-item">
                           <button className="button is-link"
                             onClick={logout}>Log out</button>
-                            </div>
-                        </Link>
-                      </div>
+                        </div>
+                      </Link>
                     </div>
                   </div>
+                </div>
                
                
               </div>

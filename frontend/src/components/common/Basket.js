@@ -88,8 +88,8 @@ class Basket extends React.Component {
           <h1 className="basket-text">Your Basket Total Is:{this.basketValue()}</h1>
           <Link to="/checkout">
             <div className="checkout-button">
-          <button className="button is-link">checkout</button>
-          </div>
+              <button className="button is-link">checkout</button>
+            </div>
           </Link>
         </div>
       </>
